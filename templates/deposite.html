@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+
+{% block title %}Deposite{% endblock title %}
+
+ {% block body %}
+<main>
+  <section class="sec-regi">
+    <div class="container">
+      <h1>Deposite Money To Your Account</h1>
+      <form method="post" class="form">
+        {% csrf_token %}
+        <div class="input-box">
+          <label for="">Amount</label>
+          <input type="text" name="amount" placeholder="Enter Amount" />
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock body %}

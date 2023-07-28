@@ -1,0 +1,721 @@
+{% load static %}
+<!--Author: W3layoutsbootstrap
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--> 
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+<title>Swiss Bank</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Online Banking Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+<!-- css files -->
+<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" / > <!-- Bootstrap-Core-CSS -->
+<link href="/static/css/style0.css" rel="stylesheet" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="/static/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="all" /> <!-- Banner-Slider-CSS -->
+<!-- //css files -->
+<link rel="stylesheet" type="text/css" href="/static/css/demo.css"/>
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Ubuntu+Condensed&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
+<!-- //online-fonts -->
+</head>
+<body>
+
+<!-- navigation -->
+<div class="nav-links">	
+		<div class="header-w3l">
+			<div class="container">
+				<a class="navbar-brand" href="/index2/"><h1><br><span>Swiss</span> BANK</h1></a>
+				<div class="call-w3l">
+					<img src="/static/images/swisslogo.png" height="130px">
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<nav class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+			</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<div class="w3l-nav">
+				<ul class="nav navbar-nav link-effect">
+					<li class="active"><a href="/index2/">Home</a></li>
+					<li><a href="#about" class="scroll">About Us</a></li>
+					<li><a href="#services" class="scroll">Services</a></li>
+					<li><a href="#team" class="scroll">Facilities</a></li>
+					<li><a href="#gallery" class="scroll">Loan & Insurance</a></li>	
+					<li><a href="#contact" class="scroll">Contact Us</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<nav class="butt1">
+		<!-- <b  style=" width: 20px; height: 15px;"> -->
+			<b>
+			{% if user.is_authenticated %}
+			<a href="{% url 'logoutUser' %}"class="butt"><h3>Logout</h3></a>
+			{% else %}
+			<a href="{% url 'login' %}"class="butt"><h3>Login</h3></a>
+			<a href="/register/" class="butt" type="menu"><h3>Register</h3></a></b>	
+			{% endif %}
+	</nav>
+	<div class="codecon_half">
+				<div class="close">
+					<span class="front"></span>
+					<span class="back"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!-- //navigation -->
+<!-- banner section -->
+<div class="banner-slider">
+				<div class="container">
+						<!--Slider-->	
+				<div class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="w3l_banner_info">
+								<h3>Services provided by Swiss BANk</h3>
+								<p>Swiss Bank is here to help you ,to satisfy you, to serve you the best services that you were looking for ......From now ,
+									no need to go anywhere........WELCOME to Swiss BANk</p>
+								
+								<div class="agileits_w3layouts_more menu__item">
+									<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Learn More</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="w3l_banner_info">
+								<h3>Insurance</h3>
+								<br>
+						<center><h4><ol>
+							<li>Life Insurance</li>
+							<li>Health Insurance</li>
+							<li>Disability Insurance</li>
+							<li>Home Insurance</li>
+							<li>Travel Insurance</li>
+							<li>Vehicle Insurance</li>
+						</ol></h4></center><br>
+								<p>We are here to protect you from financial loss in exchange of free .Insurance is a legal agreement between the insurance company(i.e., bank or insurer) and the person who want the insurance </p>					
+								<div class="agileits_w3layouts_more menu__item">
+									<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Learn More</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="w3l_banner_info">
+								<h3>Loans</h3>
+								<br>
+								<center><h4><ol >
+									<li>Gold Loan </li>
+									<li>Home Loan</li>
+									<li>Education Loan</li>
+									<li>Personal Loan</li>
+									<li>Agriculture loan</li>
+									<li>cash loan</li>
+								</ol></h4></center><br>
+								<p>Exciting offers on gold Loans
+									we are here to lend you money as fast as pssible
+								   loans with less rate of interest</p>						
+								<div class="agileits_w3layouts_more menu__item">
+									<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Learn More</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="w3l_banner_info">
+								<h3>Your Security is Our Motive</h3>
+								<p>Swiss BANK secures your transaction and Personal information online using encryption  software that converts your information into code that only bank can read</p>
+								<div class="agileits_w3layouts_more menu__item">
+									<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Learn More</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //Slider -->
+
+				</div>
+</div>
+<!-- Modal1 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<img src="/static/images/background.avif" alt="WELCOME to the bank">    			  
+				   <b class="img-responsive"></b>
+					<h5>Swiss Bank</h5>
+					<p>Discover our comprehensive range of financial services and learn how we can help you achieve your financial goals. Explore our diverse portfolio of banking solutions and learn more about the benefits and features they offer.</p>
+			</div>
+		</div>
+		<!-- //Modal content-->
+	</div>
+</div>
+<!-- //Modal1 -->
+<!-- //banner section -->
+<!-- about -->
+<div class="about" id="about">
+	<div class="container">
+		<h3 class="w3l-title"><span>About</span> Us</h3>
+		<div class="w3-agileits-about-grids">
+			<div class="col-md-5 agile-about-right">
+				<img src="/static/images/interest1.avif" alt="" />
+			</div>
+			<div class="col-md-7 agile-about-left">
+				<h3 class="w3l-sub"> Interest Rate</h3>
+				<p class="sub-p">Considering the financial situation of our customer</p>
+				<p class="sub-p2">Interest Rate of loans Swiss Bank = 10.50%
+					Interest is typically paid to the account monthly</p>
+				<p class="sub-p3"> The interest rate is the amount a lender charges ta borrower and ia a percentage of the principal on the amount load
+				</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!-- //about -->
+<!-- wthree-slid -->
+	<div class="wthree-slid"> 
+		<div class="col-sm-6 col-xs-8 wthree-slid-right"> 
+			<h4>Saving and Lockers	</h4>
+			<p>To store your Jwellery , Property papers , Polivies ,Bonds we provide you 
+				Lockers	</p>
+				<p>Annual fees for lockers varies as per the sixe of locker and the center where the branch is located </p>
+				<p>HURRY UP!!! Confirm your Swiss by confirming your locker now ....Contact us</p>
+		<a class="w3l-cont scroll" href="#contact">Contact Us</a>
+		</div> 
+		<div class="col-sm-6 col-xs-4 wthree-slid-left"> 
+			 
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<!-- wthree-slid --> 
+<!-- services -->
+	<div class="services" id="services">
+		<div class="container">
+			<h3 class="w3l-title"><span>Our</span> Services</h3>
+			<div class="col-md-4 services-grids-1">
+				
+			</div>
+			<div class="col-md-4 services-grids">
+				<div class="wthree-services-grid">
+					<div class="wthree-services-icon">
+						<i class="fa fa-money" aria-hidden="true"></i>
+					</div>
+					<div class="wthree-services-info">
+						<h5>Credit Card</h5>
+						<p>Apply for your credit card ,trying to provide you the fastest services </p>
+					<center><a href="{% url 'creditdebit' %}"><button class="btnn" type="apply" style="color: white ; f"> Apply</button></a></center>
+					</div>
+				</div>
+				<div class="wthree-services-grid w3l-agile">
+					<div class="wthree-services-icon">
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</div>
+					<div class="wthree-services-info">
+						<h5>Debit Card</h5>
+						<p>Apply for your Debit card ,trying to provide you the fastest services </p>
+						<center><a href="{% url 'creditdebit' %}"><button class="btnn" type="apply" style="color: white ; font:bold;"> Apply</button></a></center>
+					</div>
+				</div>
+				<div class="wthree-services-grid">
+					<div class="wthree-services-icon">
+						<i class="fa fa-car" aria-hidden="true"></i>
+					</div>
+					<div class="wthree-services-info">
+						<h5>Sales & Trading</h5>
+						<p>The division of an investment bank responsible fo making market in stocks,bonds and derivatives </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 services-grids w3l-seco">
+				<div class="wthree-services-grid">
+					<div class="wthree-services-icon">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</div>
+					<div class="wthree-services-info">
+						<h5>Notify on linked device immediately after transaction</h5>
+						<p>An pop-up notification will get after any transactions happen in your account
+						</p>
+					</div>
+				</div>
+				<div class="wthree-services-grid w3l-agile">
+					<div class="wthree-services-icon">
+						<i class="fa fa-signal" aria-hidden="true"></i>
+					</div>
+					<div class="wthree-services-info">
+						<h5>Financial/Tax Advisors</h5>
+						<p>Maximizing wealth through strategic tax planning and expert financial guidance. </p>
+					</div>
+				</div>
+				<div class="wthree-services-grid">
+					<div class="wthree-services-icon">
+						<i class="fa fa-credit-card" aria-hidden="true"></i>
+					</div>
+					<div class="wthree-services-info">
+						<h5>Government Schemes</h5>
+						<h4><ul>
+							<p>Pension Schemes,senior citizens saving Schemes, sukanya samriddhi account and many more for more information contact us</p>
+						</ul></h4>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //services -->
+<!--stats-->
+<div data-vide-bg="/static/video/coins.mp4">
+	<div class="stats center-container" id="stats">
+		<div class="container">
+			<div class="stats-info">
+				<div class="col-md-4 col-xs-4 stats-grid slideanim">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<div class="agile-one">
+						<h4 class="stats-info">Employees</h4>
+						<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1200' data-delay='.5' data-increment="1">1200</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-4 stats-grid slideanim">
+					<i class="fa fa-globe" aria-hidden="true"></i>
+					<div class="agile-one">
+						<h4 class="stats-info">Locations</h4>
+						<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='20' data-delay='5' data-increment="1">20</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-4 stats-grid slideanim">
+					<i class="fa fa-diamond" aria-hidden="true"></i>
+					<div class="agile-one">
+						<h4 class="stats-info">Awards Winning</h4>
+						<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='700' data-delay='.5' data-increment="1">700</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//stats-->
+<!-- team -->
+	<div id="team" class="team agileits" >
+		<div class="team-agileinfo">
+			<div class="container">  
+				<h3 class="w3l-title"><span>Facilities</span> </h3>
+				<div class="team-row agileits-w3layouts">
+					<div class="col-md-3 col-xs-6 team-grids">
+						<div class="team-agileimg">
+							<img class="img-responsive" src="/static/images/withdraw2.avif" alt="">
+							<div class="captn">
+								<div class="captn-top">
+									<center>WITHDRAW</center>
+									<p>Withdraw the amount you want </p>
+								</div> 
+							<!-- <button class="btn" type="button">WITHDRAW</button> -->
+							</div>
+						</div>
+					</div>					
+					<div class="col-md-3 col-xs-6 team-grids">
+						<div class="team-agileimg">
+							<img class="img-responsive" src="/static/images/deposit3.avif" alt="">
+							<div class="captn">
+								<div class="captn-top">
+									<!-- <center>DEPOSITE</center> -->
+									<p>Deposite the amount you want </p>
+								</div>
+								<!-- <button class="btn" type="button">DEPOSITE</button> -->
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6 team-grids">
+						<div class="team-agileimg">
+							<img class="img-responsive" src="/static/images/chequebook.avif" alt="">
+							<div class="captn">
+								<div class="captn-top">
+							<!-- <p> CHEQUE BOOK RENEWAL</p> -->
+									<p>Apply for your cheque book renewal</p>
+							</div>
+							<!-- <button class="btn" type="button">APPLY</button> -->
+						</div>
+					</div>
+					
+					<div class="clearfix"> </div>
+				
+			</div>
+		</div>
+	</div>
+	<br>
+	<!-- //team -->   
+<!-- testimonials -->
+	<div class="testimonials">
+			<div class="wthree_testimonial_grids">
+				<div class="col-md-6 wthree_testimonial_grid_left">
+					<div class="w3ls_testimonial_grid_left_grid">
+						<div class="col-xs-4 agileinfo_testimonials_left">
+							<img src="/static/images/f2.jpg" alt=" " class="img-responsive" />
+							<h4>Customer</h4>
+						</div>
+						<div class="col-xs-8 agileinfo_testimonials_right">
+							<div class="agileits_testimonials_right_grid">
+								<p>What should be the least starting amount to open an account</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="w3ls_testimonial_grid_left_grid w3l_testimonial_grid_left_grid">	
+						<div class="col-xs-8 agileinfo_testimonials_right agileits_w3layouts_farm_man">
+							<div class="agileits_testimonials_right_grid w3_testimonials_right_grid">
+								<p>Sir,It can be 100 rs.at least or more as you want to invest......
+									Thank you for choosing our bank  </p>
+							</div>
+						</div>
+						<div class="col-xs-4 agileinfo_testimonials_left">
+							<img src="/static/images/f3.jpg" alt=" " class="img-responsive" />
+							<h4>Bank Employee</h4>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-6 stats_grid_left1">
+					<img src="/static/images/chat.avif" alt=" " class="img-responsive">
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+	</div>
+	<!-- //testimonials -->
+ <!--/gallery-->
+ <div class="gallery" id="gallery" style="height: 50px;">
+	<div class="container">
+		<h3 class="w3l-title"><span>Loan</span> </h3>
+		<div class="agile_gallery_grids w3-agile">
+				<ul class="clearfix demo">
+					<li>
+						<div class="gallery-grid1">
+							<img src="/static/images/educationloan.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Education</span>Loan</h4>
+								<p>For Education loan apply here</p>						
+							</div>							
+						</div>
+				
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="/static/images/goldloan.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Gold </span> Loan</h4>
+								<p>For Gold loan apply here</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="/static/images/homeloan.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Home</span>Loan</h4>
+								<p>For Home loan apply here</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<a href="{% url 'loanreg' %}"><center><button class="btnn" type="button" style="width: 90px; font-size: 20px;">APPLY </button></center></a>
+				<li>
+				</ul>
+ <div class="gallery" id="gallery" style="height: 100px;">
+	<div class="container">
+		<h3 class="w3l-title"><span>Insurance</span> </h3>
+		<div class="agile_gallery_grids w3-agile">
+				<ul class="clearfix demo">
+					
+					</div> 
+
+					
+						<div class="gallery" id="gallery">
+							<div class="container">
+								<div class="agile_gallery_grids w3-agile">
+										<ul class="clearfix demo">
+											<li>
+												<div class="gallery-grid1">
+							<img src="/static/images/disability.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Disability</span> Insurance</h4>
+								<p>For Disability Insurance apply here</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="/static/images/health2.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Health</span> Insurance</h4>
+								<p>For Health Insurance apply here</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="/static/images/vehicle.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Vehicle</span>Insurance</h4>
+								<p>Vehicle For Vehicle Insurance apply here</p>
+							</div>
+						</div>
+					</li>
+					<a href="{% url 'insureg' %}"><center><button class="btnn" type="button" style="width: 90px; font-size: 20px;">APPLY </button></center></a>
+					<br>
+					<!-- <li>
+
+
+						<div class="gallery-grid1">
+							<img src="/static/images/saving3.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Online</span> Banking</h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="/static/images/saving4.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Online</span> Banking</h4>
+								<p>Register for your saving accounts</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="/static/images/locker.avif" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4><span>Online</span> Banking</h4>
+								<p>register for your lockers</p>
+							</div>
+						</div>
+					</li>
+					<center><button class="btn " type="button" style="width: 90px; font-size: 20px;">APPLY </button></center> -->
+				</ul>
+			</div>
+	</div>
+</div>
+<!--//gallery-->
+<!-- mail -->
+<div class="mail" id="contact">
+	<div class="container">
+		<h3 class="w3l-title"><span>Contact</span> Us</h3>
+		<div class="mail-w3l-agile">
+			<div class="col-md-6 col-sm-6 contact-left-w3ls">
+				<div class="w3l-cont-mk">
+					<img src="/static/images/contact44.jpg">
+				</div>
+				<h3>Contact Info</h3>
+				<div class="visit">
+					<div class="col-md-2 col-sm-2 col-xs-2 contact-icon-wthree">
+						<i class="fa fa-home" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
+						<h4>Visit us</h4>
+						<p>Parma Via Modena,BO, Italy</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="mail-w3">
+					<div class="col-md-2 col-sm-2 col-xs-2 contact-icon-wthree">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
+						<h4>Mail us</h4>
+						<p><a href="mailto:Swissbank@gmail.com">Swissbank@gmail.com</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="call">
+					<div class="col-md-2 col-sm-2 col-xs-2 contact-icon-wthree">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
+						<h4>Call us</h4>
+						<p>+91 0789654121</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 agileinfo_mail_grid_right">
+				<h3>Get In Touch</h3>
+				<form action="#" method="post">
+					<div class="wthree_contact_left_grid">
+						<input type="text" name="Name" placeholder="Name" required="">
+						<input type="email" name="Email" placeholder="Email" required="">
+						<input type="text" name="number" placeholder="Phone Number" required="">
+					</div>
+					<textarea name="Message" placeholder="Message......." required=""></textarea>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="map" style="width: 110%; float:left">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.0475880927893!2d8.535689676474398!3d47.37198967116926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a06cd996733%3A0x9f94e7c3cea4e11e!2sBahnhofstrasse%2045%2C%208001%20Z%C3%BCrich%2C%20Switzerland!5e0!3m2!1sen!2sin!4v1689632601387!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
+<!-- //mail -->
+<!-- footer -->
+<div class="footer-bot">
+	<div class="container">
+		<div class="logo2">
+			<h2><a href="index.html"><span>Swiss</span> Bank</a></h2>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="copy-right">
+   
+	<div class="container">
+		<!-- <p> &copy; 2017 Online Banking. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p> -->
+	</div>
+</div>
+
+<footer class="myfooter">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-4">
+		  <h4 style="color: white;">About Us</h4>
+		  <p>At Swiss Bank, we combine Swiss precision with unparalleled financial expertise to provide exceptional banking services that exceed our clients' expectations and safeguard their wealth with the highest level of security and discretion.</p>
+		</div>
+		<div class="col-md-4">
+		  <h4 style="color: white;">Contact Information</h4>
+		  <p>Address: Parma Via Modena,BO, Italy</p>
+		  <p>Phone: +1 123-456-7890</p>
+		  <p>Email: swissbank@gmail.com</p>
+		</div>
+		<div class="col-md-4">
+		  <h4 style="color: white;">Quick Links</h4>
+		  <ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/services">Services</a></li>
+			<li><a href="/accounts">Accounts</a></li>
+			<li><a href="/contact">Contact Us</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+	<div class="bottom-bar">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-6">
+			<p>&copy; 2023 Your Bank. All rights reserved.</p>
+		  </div>
+		  <div class="col-md-6">
+			<ul class="social-icons">
+			  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+			  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+			  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </footer>
+  
+<!-- //footer -->
+
+<!-- js files -->
+<!-- js -->
+<script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+<!-- //js -->
+<!-- js for banner -->
+<!-- responsiveslider -->
+	<script src="/static/js/responsiveslides.min.js"></script>
+		<script>
+			// You can also use "$(window).load(function() {"
+			$(function () {
+			  // Slideshow 4
+			  $("#slider3").responsiveSlides({
+				auto: true,
+				pager:true,
+				nav:false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+				  $('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+				  $('.events').append("<li>after event fired.</li>");
+				}
+			  });
+		
+			});
+		 </script>
+	<!-- //responsiveslider -->
+	<!-- stats -->
+<script type="text/javascript" src="/static/js/numscroller-1.0.js"></script>
+<!-- //stats -->
+<!-- /js for banner -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="/static/js/move-top.js"></script>
+<script type="text/javascript" src="/static/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- smooth scrolling -->
+<script src="/static/js/SmoothScroll.min.js"></script>
+<!-- //smooth scrolling -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+		var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+		};
+		*/
+		
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		
+	});
+</script>
+<!-- //smooth-scrolling-of-move-up -->  
+<!-- video-js -->
+<script src="/static/js/jquery.vide.min.js"></script>
+<!-- //video-js -->
+<!--gallery-js -->
+<script src="/static/js/jquery.picEyes.js"></script>
+				<script>
+					$(function(){
+						//picturesEyes($('.demo li'));
+						$('.demo li').picEyes();
+					});
+				</script>
+<!--//gallery-js -->
+<!-- //js files -->
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Card Application Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+        background-image: url("{% static 'images/card.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-container {
+        width: 400px;
+        margin: 0;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px black;
+      }
+
+      .form-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .form-container input,
+      .form-container select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+      }
+
+      .form-container input[type="submit"] {
+        background-color: #e4cca1;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .form-container input[type="submit"]:hover {
+        background-color: rgb(66, 52, 52);
+      }
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Card Application Form</h2>
+
+      <form id="applicationForm" method="post">
+        {% csrf_token %}
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" required />
+        <br />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+        <br />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" id="phone" required />
+        <br />
+
+        <label for="bankName">Bank Name:</label>
+        <input type="text" name="bankName" id="bankName" required />
+        <br />
+
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" name="accountNumber" id="accountNumber" required />
+        <br />
+        <label for="cardType">Card Type:</label>
+        <select id="cardType" name="cardType" required>
+          <option value="">Select Card Type</option>
+          <option value="credit">Credit Card</option>
+          <option value="debit">Debit Card</option>
+        </select>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    {% comment %}
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+
+        // Resetting error messages
+        var errorElements = document.getElementsByClassName("error");
+        for (var i = 0; i < errorElements.length; i++) {
+          errorElements[i].innerHTML = "";
+        }
+
+        var fullName = document.getElementById("fullName").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var cardType = document.getElementById("cardType").value;
+        var cardNumber = document.getElementById("cardNumber").value;
+        var expiryDate = document.getElementById("expiryDate").value;
+        var cvv = document.getElementById("cvv").value;
+        var bankName = document.getElementById("bankName").value;
+        var accountNumber = document.getElementById("accountNumber").value;
+
+        var isValid = true;
+
+        // Validating Full Name
+        if (fullName.trim() === "") {
+          document.getElementById("fullNameError").innerHTML =
+            "Please enter your full name";
+          isValid = false;
+        }
+
+        // Validating Email
+        if (email.trim() === "") {
+          document.getElementById("emailError").innerHTML =
+            "Please enter your email";
+          isValid = false;
+        } else if (!validateEmail(email)) {
+          document.getElementById("emailError").innerHTML =
+            "Please enter a valid email";
+          isValid = false;
+        }
+
+        // Validating Phone Number
+        if (phone.trim() === "") {
+          document.getElementById("phoneError").innerHTML =
+            "Please enter your phone number";
+          isValid = false;
+        } else if (!validatePhone(phone)) {
+          document.getElementById("phoneError").innerHTML =
+            "Please enter a valid phone number";
+          isValid = false;
+        }
+
+        // Validating Card Type
+        if (cardType === "") {
+          document.getElementById("cardTypeError").innerHTML =
+            "Please select a card type";
+          isValid = false;
+        }
+
+        // Validating Bank Name
+        if (bankName.trim() === "") {
+          document.getElementById("bankNameError").innerHTML =
+            "Please enter the bank name";
+          isValid = false;
+        }
+
+        // Validating Account Number
+        if (accountNumber.trim() === "") {
+          document.getElementById("accountNumberError").innerHTML =
+            "Please enter the account number";
+          isValid = false;
+        }
+
+        // Submit the form if all validations pass
+        if (isValid) {
+          document.getElementById("applicationForm").submit();
+        }
+      }
+
+      function validateEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function validatePhone(phone) {
+        var phoneRegex = /^\d{10}$/;
+        return phoneRegex.test(phone);
+      }
+    </script>
+    {% endcomment %}
+  </body>
+</html>

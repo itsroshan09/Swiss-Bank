@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+ {% block title %}Deposite{% endblock title %}
+
+
+ {% block body %}
+<main>
+  <section class="sec-regi">
+    <div class="container">
+      <h1>Transaction History</h1>
+      <hr />
+      <br />
+      <table>
+        <tbody>
+          <tr>
+            <th>Date</th>
+            <th>Sender</th>
+            <th>Receiver</th>
+            <th>Amount</th>
+          </tr>
+          {% for trans in transaction %}
+          <tr>
+            <td>{{trans.date}}</td>
+            <td>{{trans.sender}}</td>
+            <td>{{trans.receiver}}</td>
+            <td>{{trans.amount}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+       <!-- Add your HTML content here -->
+<br><br>
+<!-- Add a Print button -->
+<div class="printbutton">
+<button id="printBtn">Print  History</button>
+
+<!-- Include the script at the end of the body -->
+<script>
+  document.getElementById('printBtn').addEventListener('click', function () {
+    window.print();
+  });
+</script>
+    </div>
+  </div>
+    
+  </section>
+ 
+ 
+
+  
+</main>
+{% endblock body %}

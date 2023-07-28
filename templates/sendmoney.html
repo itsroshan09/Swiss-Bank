@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+
+
+{% block title %}Send Money{% endblock title %} 
+
+{% block body %}
+<main>
+  <section class="sec-wid">
+    <div class="send-money">
+      <form method="post">
+        {% csrf_token %}
+        <h1>Send Money To Others</h1>
+        <hr />
+        <div class="wid-input">
+          <label for="receiverUsername">Receiver Username</label>
+          <input type="text" name="receiverUsername" />
+        </div>
+        <div class="wid-input">
+          <label for="amount">Amount</label>
+          <input type="number" name="amount" />
+        </div>
+        <div class="wid-input">
+          <label for="password">PIN</label>
+          <input type="text" name="password" />
+        </div>
+        <button type="submit">PAY</button>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock body %}

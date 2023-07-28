@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+ {% block title %}Login{% endblock title %} 
+
+
+{% block body %}
+<main>
+  <section class="sec-regi">
+    <div class="container">
+      <h1>Login Form</h1>
+      <form method="post" action="" class="form">
+        {% csrf_token %}
+        <div class="input-box">
+          <label for="">Username</label>
+          <input type="text" name="username" placeholder="Enter username" />
+        </div>
+
+        <div class="input-box">
+          <label for="">Password</label>
+          <input type="password" name="password" placeholder="Enter Password" />
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock body %}

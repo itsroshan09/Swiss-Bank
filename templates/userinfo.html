@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %} Userinfo {% endblock title %}
+{% block body %}
+<main>
+    <section class="sec-regi">
+        <div class="container">
+            <h1>User Information</h1>
+            <form action="" class="form">
+                <div class="input-box">
+                    <label for="">Full Name</label>
+                    <input type="text" placeholder="Enter Full Name" value="{{userinfo.username}}">
+                </div>
+
+                <div class="input-box">
+                    <label for="">Email Address</label>
+                    <input type="email" placeholder="Enter address" value="{{userinfo.email}}">
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label for="">Phone Number</label>
+                        <input type="number" placeholder="Enter number" value="{{userinfo.phone_number}}">
+                    </div>
+                    <div class="input-box">
+                        <label for="">Birth Date</label>
+                        <input type="text" value="{{userinfo.dob}}">
+                    </div>
+                </div>
+
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-male" name="gender" value="{{userinfo.gender}}" checked>
+                            <label for="check-male">Male</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-female" name="gender" value="{{userinfo.gender}}">
+                            <label for="check-female">Female</label>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="input-box address">
+                    <label for="">Address</label>
+                    <input type="text" placeholder="Enter Address" value="{{userinfo.address}}">
+                    <div class="column">
+                        <div class="input-box">
+                            <label for="">City</label>
+                            <input type="text" placeholder="Enter city" value="{{userinfo.city}}">
+                        </div>
+                        <div class="input-box">
+                            <label for="">Postal Code</label>
+                            <input type="text" placeholder="Enter postal code" value="{{userinfo.postcode}}">
+                        </div>
+                    </div>
+                </div> 
+                <div class="input-box">
+                    <label for="">Account Type</label>
+                    <input type="text" placeholder="Enter postal code" value="{{userinfo.ac_type}} Account">
+                </div>
+
+
+            </form> 
+            <div class="user-info">
+                <button id="cardBtn">Generate Debit Card</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-debitcard">
+        <div id="debitcard" class="container">
+            <div class="debitcard">
+                <span class="logo">
+                    <img src="/static/images/logo.png" alt="">
+                    <h5>Master Card</h5>
+                </span>
+                <img src="/static/images/chip.png" class="chip" alt="">
+            </div>
+            <div class="card-details">
+                <div class="name-number">
+                    <h6>Card Number</h6>
+                    <h5 class="number">8050 5040 2030 3020</h5>
+                    <h5 class="name">{{userinfo.username}}</h5>
+                </div>
+                <div class="valid-date">
+                    <h6>Valid Thru</h6>
+                    <h5>05/28</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+var btn = document.getElementById('cardBtn');
+
+btn.addEventListener('click', function() {
+    var card = document.getElementById('debitcard');
+    card.classList.toggle('cardNone');
+});
+
+</style>
+
+{% endblock body %}

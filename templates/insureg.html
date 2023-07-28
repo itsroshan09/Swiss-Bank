@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Insurance Application Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        background-image: url("{% static 'images/insurance.avif' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ffffff;
+      }
+
+      form {
+        max-width: 500px;
+        
+        /* background-color: #ffffff; */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 18pt;
+        color: #ffffff;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      h2 {
+        color: #ffffff;
+      }
+    </style>
+    {% comment %}
+    <script>
+      // JavaScript code for form validation (same as in the original code)
+      function validateForm() {
+        var fullName = document.forms["insuranceForm"]["fullName"].value;
+        var dateOfBirth = document.forms["insuranceForm"]["dateOfBirth"].value;
+        var contactNumber =
+          document.forms["insuranceForm"]["contactNumber"].value;
+        var email = document.forms["insuranceForm"]["email"].value;
+        var bankName = document.forms["insuranceForm"]["bankName"].value;
+        var accountNumber =
+          document.forms["insuranceForm"]["accountNumber"].value;
+        var insuranceType =
+          document.forms["insuranceForm"]["insuranceType"].value;
+
+        if (fullName == "") {
+          alert("Please enter your full name.");
+          return false;
+        }
+
+        if (dateOfBirth == "") {
+          alert("Please enter your date of birth.");
+          return false;
+        }
+
+        if (contactNumber == "") {
+          alert("Please enter your contact number.");
+          return false;
+        }
+
+        if (email == "") {
+          alert("Please enter your email address.");
+          return false;
+        }
+
+        if (bankName == "") {
+          alert("Please enter your bank name.");
+          return false;
+        }
+
+        if (accountNumber == "") {
+          alert("Please enter your bank account number.");
+          return false;
+        }
+
+        if (insuranceType == "") {
+          alert("Please select the insurance type.");
+          return false;
+        }
+      }
+    </script>
+    {% endcomment %}
+  </head>
+
+  <body>
+   
+    
+    <h1>Insurance Application Form</h1>
+    <form method="post">
+      {% csrf_token %}
+      <h2>Personal Information</h2>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required /><br /><br />
+
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input
+        type="date"
+        id="dateOfBirth"
+        name="dateOfBirth"
+        required
+      /><br /><br />
+
+      <label for="contactNumber">Contact Number:</label>
+      <input
+        type="tel"
+        id="contactNumber"
+        name="contactNumber"
+        pattern="[0-9]{10}"
+        required
+      /><br /><br />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <h2>Bank Details</h2>
+      <label for="bankName">Bank Name:</label>
+      <input type="text" id="bankName" name="bankName" required /><br /><br />
+
+      <label for="accountNumber">Account Number:</label>
+      <input
+        type="text"
+        id="accountNumber"
+        name="accountNumber"
+        required
+      /><br /><br />
+
+      <h2>Insurance Type</h2>
+      <label for="insuranceType">Insurance Type:</label>
+      <select id="insuranceType" name="insuranceType" required>
+        <option value="">Select Insurance Type</option>
+        <option value="Health">Health Insurance</option>
+        <option value="Auto">Auto Insurance</option>
+        <option value="Home">Home Insurance</option>
+        <option value="Life">Life Insurance</option></select
+      ><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+{% load static %}
+
+    <title>Razorpay</title>
+    <style>
+        .paybtnn{
+            color:white;
+            background-color:#4fb953;
+            height:40px;
+            width:100px;
+            border-radius:5px;
+            margin-left: 708px;
+            margin-top: 500px;
+        }
+        .paybtnn:hover{
+            background-color: #1eef5d;
+        }
+    </style>
+
+ 
+<button id="rzp-button1" class="paybtnn"><i class="fas fa-money-bill"></i> Pay</button>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  var options = {
+    "key": "rzp_test_lfLo1iGGuZCxeo", // Enter the Key ID generated from the Dashboard
+    "amount": "1000",
+    "currency": "INR",
+    "description": "Swiss Bank",
+    "image": "https://s3.amazonaws.com/rzp-mobile/images/rzp.jpg",
+    "prefill":
+    {
+      "email": "gaurav.kumar@example.com",
+      "contact": +919900000000,
+    },
+    config: {
+      display: {
+        blocks: {
+          utib: { //name for Axis block
+            name: "Pay using Axis Bank",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["UTIB"]
+              },
+              {
+                method: "netbanking",
+                banks: ["UTIB"]
+              },
+            ]
+          },
+          other: { //  name for other block
+            name: "Other Payment modes",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["ICIC"]
+              },
+              {
+                method: 'netbanking',
+              }
+            ]
+          }
+        },
+        hide: [
+          {
+          method: "upi"
+          
+          }
+        ],
+        sequence: ["block.utib", "block.other"],
+        preferences: {
+          show_default_blocks: false // Should Checkout show its default blocks?
+        }
+      }
+    },
+    "handler": function (response) {
+      alert(response.razorpay_payment_id);
+    },
+    "modal": {
+      "ondismiss": function () {
+        if (confirm("Are you sure, you want to close the form?")) {
+          txt = "You pressed OK!";
+          console.log("Checkout form closed by the user");
+          window.location.href = "/";
+        } else {
+          txt = "You pressed Cancel!";
+          console.log("Complete the Payment")
+        }
+      }
+    }
+  };
+  var rzp1 = new Razorpay(options);
+  document.getElementById('rzp-button1').onclick = function (e) {
+    rzp1.open();
+    e.preventDefault();
+  }
+</script>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'images/razo2.webp' %}");
+            background-repeat:no-repeat;
+            background-size:1503px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .logo {
+            max-width: 200px;
+            margin-left:0px;
+        }
+        .payment-form {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .payment-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .payment-form input[type="text"],
+        .payment-form input[type="number"],
+        .payment-form select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .payment-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .payment-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="{% static 'images/razo1.png' %}" alt="Insurance Company Logo">
+    <div class="container" style="height:100px;">
+        
+        <!-- <h2>Insurance Payment</h2>
+        <div class="payment-form">
+            <form action="#" method="post">
+                {% comment %} <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="policy">Policy Number:</label>
+                <input type="text" id="policy" name="policy" required>
+
+                <label for="amount">Amount (USD):</label>
+                <input type="number" id="amount" name="amount" min="1" required> {% endcomment %} -->
+
+                <!-- Add more form fields as needed for payment details (e.g., card number, expiration date, etc.) -->
+                <!-- <button id="rzp-button1" class="btn btn-outline-dark btn-lg"><i class="fas fa-money-bill"></i> Pay</button>
+                <input type="submit" value="Pay Now"> -->
+            </form>
+        </div>
+    </div>
+{% comment %} </body>
+</html> {% endcomment %}
+
+
+{% include "footer.html" %}
+

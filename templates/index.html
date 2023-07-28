@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+
+{% block title %}Home{% endblock title %} 
+
+{% block body %}
+<main>
+  <section class="sec-index">
+    <div class="bg-btn">
+      {% if user.is_superuser %}
+
+      <a href="/sendmoney/">Sendmoney</a>
+      <br>
+
+      <a href="/withdraw/">Withdraw</a>
+      <br>
+      <a href="/deposite/">Deposite</a>
+      <br>
+
+      <a href="/transaction/">Transaction</a>
+      <br>
+      <a href="/admin/">Admin Panel</a>
+      
+      {% comment %} <a href="/transaction/">Balance</a> {% endcomment %}
+      {% else %}
+      <a href="/sendmoney/">Sendmoney</a>
+      <br>
+      <a href="/withdraw/">Withdraw</a><br>
+      <a href="/deposite/">Deposite</a><br>
+      <a href="/transaction/">Transaction</a><br><br><br>
+      {% comment %} <a href="/transaction/">Balance</a> {% endcomment %}
+      {% endif %}
+    </div>
+  </section>
+</main>
+{% endblock body %}
